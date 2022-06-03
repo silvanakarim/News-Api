@@ -1,0 +1,36 @@
+.font-family-helvetica{
+    font-family: "Helvetica Neue";
+}
+.dropdown-menu{
+    width: 420% !important;
+}
+.color-danger{
+    color: rgb(220, 53, 69);
+}
+
+@media screen and (max-width:600px) {
+    .dropdown-menu{
+        width: 100% !important;
+    }
+}
+@media screen and (min-width:601px) and (max-width:768px){
+    .dropdown-menu{
+        width: 100% !important;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:992px) {
+    .dropdown-menu{
+        width: 100% !important;
+    }
+} 
+
+@media screen and (min-width:993px) and (max-width:1200px){
+    .dropdown-menu{
+        width: 400% !important;
+    }
+}
+
+@media screen and (min-width:1201px){
+
+}
