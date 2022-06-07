@@ -6,16 +6,11 @@ var category = '';
 var country = '';
 var url = `https://newsapi.org/v2/top-headlines?category=general&apiKey=b0a9ec91648b45899b43371a3bd0bb65`;
 
-function requestApi(url) {
-    var myHttp = new XMLHttpRequest();
-    myHttp.open('GET', url)
-    myHttp.send();
-    myHttp.addEventListener('readystatechange', function () {
-        if (myHttp.readyState == 4 && myHttp.status == 200) {
-            posts = JSON.parse(myHttp.response).articles
-            displayNews();
-        }
-    })
+async function requestApi(url) {
+    var result= await fetch(url);
+    var finalResult= await result.json();
+    posts= finalResult.articles;
+    displayNews();
 }
 
 requestApi(url); 
@@ -88,3 +83,5 @@ function chooseCountry() {
 }
 
 chooseCountry();
+
+
